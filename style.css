@@ -1,0 +1,50 @@
+/* Scrap Baron pages: the hexsmith-site pattern in the game's own palette (warm night yard, copper). */
+:root {
+  --bg: #1c1714;
+  --card: #2b2420;
+  --line: #3d332d;
+  --text: #f2e6c8;
+  --muted: #c4b5a8;
+  --accent: #e8954a;
+  --link: #f6c07a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 16px; }
+body { margin: 0; background: var(--bg); color: var(--text);
+       font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 48px; }
+h1 { color: var(--accent); font-size: 28px; line-height: 1.2; margin: 0 0 4px; }
+h2 { font-size: 20px; line-height: 1.3; margin: 28px 0 8px; color: var(--accent); }
+h3 { font-size: 17px; margin: 20px 0 2px; }
+section { background: var(--card); border-radius: 12px; padding: 4px 20px 16px; margin-top: 24px; }
+p, li { color: var(--text); }
+ul { padding-left: 22px; }
+li + li { margin-top: 4px; }
+.muted { color: var(--muted); font-size: 15px; }
+.lead { border-left: 4px solid var(--accent); padding: 8px 14px; background: rgba(232, 149, 74, 0.08); border-radius: 0 8px 8px 0; }
+a { color: var(--link); text-underline-offset: 2px; }
+a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+nav { font-size: 15px; margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+nav a { display: inline-block; padding: 6px 0; min-height: 32px; }
+.langs { font-size: 15px; color: var(--muted); }
+.icon { width: 128px; height: 128px; border-radius: 28px; image-rendering: pixelated; }
+.hero { text-align: center; }
+.hero h1 { font-size: 36px; margin-top: 12px; }
+.links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; }
+.links a { padding: 8px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; }
+@media (max-width: 560px) {
+  /* The components table becomes one card per row on phones. */
+  thead { display: none; }
+  table, tbody, tr, td { display: block; width: 100%; }
+  tr { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  td { border: 0; padding: 1px 0; }
+}
+details { margin: 12px 0; }
+summary { cursor: pointer; color: var(--link); padding: 6px 0; }
+pre { white-space: pre-wrap; word-break: break-word; font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+      background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 12px; color: var(--muted); }
+footer { margin-top: 32px; text-align: center; }
